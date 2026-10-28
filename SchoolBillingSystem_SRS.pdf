@@ -1,0 +1,341 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3967 >>
+stream
+BT
+/F2 20 Tf
+50 760 Td
+(SCHOOL BILLING SYSTEM) Tj
+ET
+BT
+/F1 12 Tf
+50 724 Td
+(Software Requirements Specification
+Prepared by: Jevirson Andrew H. Intes) Tj
+ET
+BT
+/F1 11 Tf
+54 696 Td
+(SCHOOL BILLING SYSTEM) Tj
+ET
+BT
+/F1 11 Tf
+54 678 Td
+(SOFTWARE REQUIREMENTS SPECIFICATION) Tj
+ET
+BT
+/F1 11 Tf
+54 648 Td
+(Prepared by:) Tj
+ET
+BT
+/F1 11 Tf
+54 630 Td
+(Jevirson Andrew H. Intes) Tj
+ET
+BT
+/F1 11 Tf
+54 600 Td
+(Abstract) Tj
+ET
+BT
+/F1 11 Tf
+54 582 Td
+(This project proposes the development of a School Billing System designed to streamline and automate fee management, payment collection, and financial monitoring for educational institutions. The system will provide a centralized platform for handling student accounts, invoices, payment history, and outstanding balances while improving reliability, accuracy, and administrative efficiency.) Tj
+ET
+BT
+/F2 12 Tf
+52 552 Td
+(1. INTRODUCTION) Tj
+ET
+BT
+/F1 11 Tf
+54 534 Td
+(The School Billing System is an automated solution for managing student fees and school financial transactions. It is intended for administrators, staff, and students to monitor tuition, generate invoices, record payments, and maintain accurate financial records in an organized and secure way.) Tj
+ET
+BT
+/F1 11 Tf
+54 516 Td
+(The system reduces dependence on manual recordkeeping and improves transparency for all parties involved. It is designed to manage school fees, terms, payment schedules, and balance updates in a consistent and reliable manner.) Tj
+ET
+BT
+/F2 12 Tf
+52 486 Td
+(2. BACKGROUND OF THE STUDY) Tj
+ET
+BT
+/F1 11 Tf
+54 468 Td
+(Manual billing systems are often prone to delays, duplication of records, calculation errors, and difficulty in tracking student balances. Many schools still rely on spreadsheets and paper records, making it harder to generate reports and maintain accurate financial data.) Tj
+ET
+BT
+/F1 11 Tf
+54 450 Td
+(The School Billing System addresses these concerns by providing an efficient digital process for student billing, fee management, payment tracking, and financial reporting. This modern approach supports better service delivery and smoother school operations.) Tj
+ET
+BT
+/F2 12 Tf
+52 420 Td
+(3. PROBLEM STATEMENT) Tj
+ET
+BT
+/F1 11 Tf
+54 402 Td
+(The school currently experiences difficulties in managing billing records manually. These issues include inaccurate student balances, missed payment updates, delayed invoice generation, duplicate records, limited reporting, and poor financial visibility.) Tj
+ET
+BT
+/F1 11 Tf
+54 384 Td
+(Without a centralized billing system, school administrators spend too much time on repetitive financial tasks and are at a higher risk of errors. There is a need for a system that will automate the process while maintaining data security and financial integrity.) Tj
+ET
+BT
+/F2 12 Tf
+52 354 Td
+(4. OBJECTIVES OF THE STUDY) Tj
+ET
+BT
+/F1 11 Tf
+54 336 Td
+(To automate school fee collection and payment recording.) Tj
+ET
+BT
+/F1 11 Tf
+54 318 Td
+(To generate accurate billing statements and invoices for each student.) Tj
+ET
+BT
+/F1 11 Tf
+54 300 Td
+(To monitor outstanding balances and payment statuses.) Tj
+ET
+BT
+/F1 11 Tf
+54 282 Td
+(To reduce manual workload and human error in school financial operations.) Tj
+ET
+BT
+/F1 11 Tf
+54 264 Td
+(To provide role-based access for administrators and students.) Tj
+ET
+BT
+/F1 11 Tf
+54 246 Td
+(To improve financial transparency and reporting for decision-making.) Tj
+ET
+BT
+/F2 12 Tf
+52 216 Td
+(5. SCOPE OF THE STUDY) Tj
+ET
+BT
+/F1 11 Tf
+54 198 Td
+(The system includes student information management, school fee definitions, invoice generation, payment recording, account statements, and financial reporting. It focuses on the billing and payment process of the school and is intended to support administrative and student financial needs.) Tj
+ET
+BT
+/F1 11 Tf
+54 180 Td
+(The system is limited to fees, student accounts, and payment operations. It does not cover academic grading or general school administration beyond billing-related functions.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 2550 >>
+stream
+BT
+/F2 12 Tf
+52 748 Td
+(6. FUNCTIONAL REQUIREMENTS) Tj
+ET
+BT
+/F1 11 Tf
+54 730 Td
+(The system shall allow administrators to manage student records and billing information.) Tj
+ET
+BT
+/F1 11 Tf
+54 712 Td
+(The system shall allow administrators to add fees, school terms, and billing policies.) Tj
+ET
+BT
+/F1 11 Tf
+54 694 Td
+(The system shall generate student bills and itemized invoices with details of charges and payment status.) Tj
+ET
+BT
+/F1 11 Tf
+54 676 Td
+(The system shall record student payments and automatically update balances.) Tj
+ET
+BT
+/F1 11 Tf
+54 658 Td
+(The system shall prevent duplicate billing entries and invalid overpayments.) Tj
+ET
+BT
+/F1 11 Tf
+54 640 Td
+(The system shall provide statement of account reports and payment history for students.) Tj
+ET
+BT
+/F1 11 Tf
+54 622 Td
+(The system shall support secure login and role-based access control.) Tj
+ET
+BT
+/F1 11 Tf
+54 604 Td
+(The system shall allow authorized users to generate financial reports and summaries.) Tj
+ET
+BT
+/F2 12 Tf
+52 574 Td
+(7. NON-FUNCTIONAL REQUIREMENTS) Tj
+ET
+BT
+/F1 11 Tf
+54 556 Td
+(The system must be reliable, accurate, and easy to use.) Tj
+ET
+BT
+/F1 11 Tf
+54 538 Td
+(The system must protect financial data through secure authentication and access control.) Tj
+ET
+BT
+/F1 11 Tf
+54 520 Td
+(The system must be responsive and compatible with standard web browsers.) Tj
+ET
+BT
+/F1 11 Tf
+54 502 Td
+(The system must be scalable to support future school growth and additional features.) Tj
+ET
+BT
+/F1 11 Tf
+54 484 Td
+(The system must maintain data integrity and minimize errors in transaction processing.) Tj
+ET
+BT
+/F2 12 Tf
+52 454 Td
+(8. USERS OF THE SYSTEM) Tj
+ET
+BT
+/F1 11 Tf
+54 436 Td
+(Administrator: manages student accounts, billing setup, invoices, and reports.) Tj
+ET
+BT
+/F1 11 Tf
+54 418 Td
+(Student: views billing statements, payment records, and outstanding balances.) Tj
+ET
+BT
+/F1 11 Tf
+54 400 Td
+(School staff or authorized personnel: access billing data based on assigned privileges.) Tj
+ET
+BT
+/F2 12 Tf
+52 370 Td
+(9. BENEFITS OF THE SYSTEM) Tj
+ET
+BT
+/F1 11 Tf
+54 352 Td
+(Improved efficiency in school fee management.) Tj
+ET
+BT
+/F1 11 Tf
+54 334 Td
+(Reduced manual workload and paperwork.) Tj
+ET
+BT
+/F1 11 Tf
+54 316 Td
+(Accurate and transparent student billing records.) Tj
+ET
+BT
+/F1 11 Tf
+54 298 Td
+(Better payment tracking and monitoring of balances.) Tj
+ET
+BT
+/F1 11 Tf
+54 280 Td
+(Faster generation of invoices and reports.) Tj
+ET
+BT
+/F1 11 Tf
+54 262 Td
+(Enhanced confidence in financial decision-making.) Tj
+ET
+BT
+/F2 12 Tf
+52 232 Td
+(10. CONCLUSION) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 561 >>
+stream
+BT
+/F1 11 Tf
+54 760 Td
+(The School Billing System is a necessary solution for any educational institution that wants to improve its financial management efficiency. By automating the process of fee collection, invoice generation, and payment tracking, the system provides a more accurate, transparent, and secure billing environment. This will support better financial operations and improve the overall school experience for administrators and students.) Tj
+ET
+BT
+/F1 11 Tf
+54 730 Td
+(Prepared by:) Tj
+ET
+BT
+/F1 11 Tf
+54 712 Td
+(Jevirson Andrew H. Intes) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+10 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000263 00000 n 
+0000004282 00000 n 
+0000004418 00000 n 
+0000007020 00000 n 
+0000007156 00000 n 
+0000007768 00000 n 
+0000007838 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+7914
+%%EOF

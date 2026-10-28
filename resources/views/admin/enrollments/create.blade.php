@@ -1,0 +1,27 @@
+<x-app-layout>
+    <x-slot name="header"><h2 class="text-2xl font-semibold text-slate-900">Enroll a student</h2></x-slot>
+    <main class="min-h-screen bg-slate-50 px-4 py-8 sm:px-6"><div class="mx-auto max-w-3xl rounded-2xl border bg-white p-6 shadow-sm">
+        @if($errors->any())<div class="mb-5 rounded-xl bg-rose-50 p-4 text-sm text-rose-800"><ul class="list-inside list-disc">@foreach($errors->all() as $error)<li>{{ $error }}</li>@endforeach</ul></div>@endif
+        <form method="POST" action="{{ route('admin.enrollments.store') }}" class="space-y-5" x-data="{
+            students: @js($students->map(fn($student) => ['id'=>(string)$student->id,'name'=>$student->invoice_name.' · '.$student->student_number,'courseId'=>(string)$student->course_id,'year'=>$student->year_level])->values()),
+            terms: @js($terms->map(fn($term) => ['id'=>(string)$term->id,'semester'=>$term->semester])->values()),
+            subjects: @js($subjects->map(fn($subject) => ['id'=>(int)$subject->id,'courseId'=>(string)$subject->course_id,'name'=>$subject->code.' — '.$subject->name,'units'=>(float)$subject->units,'year'=>$subject->year_level,'semester'=>$subject->semester])->values()),
+            studentId: @js((string)old('student_profile_id','')),
+            termId: @js((string)old('school_term_id','')),
+            selected: @js(array_map('intval',(array)old('subject_ids',[]))),
+            subjectQuery: '',
+            get student(){return this.students.find(s=>s.id===this.studentId)},
+            get term(){return this.terms.find(t=>t.id===this.termId)},
+            get available(){return this.subjects.filter(s=>s.courseId===this.student?.courseId&&(!s.year||s.year===this.student?.year)&&(!s.semester||s.semester===this.term?.semester))},
+            get filteredAvailable(){const query=this.subjectQuery.trim().toLowerCase();return this.available.filter(s=>!query||s.name.toLowerCase().includes(query))},
+            get selectedUnits(){return this.available.filter(s=>this.selected.includes(s.id)).reduce((sum,s)=>sum+Number(s.units),0)},
+            selectVisible(){this.selected=[...new Set([...this.selected,...this.filteredAvailable.map(s=>s.id)])]}
+        }">@csrf
+            <label class="block text-sm font-medium text-slate-700">Student<select name="student_profile_id" x-model="studentId" required class="mt-1 block w-full rounded-lg border-slate-300"><option value="">Select student</option>@foreach($students as $student)<option value="{{ $student->id }}">{{ $student->invoice_name }} · {{ $student->student_number }} · {{ $student->course?->code ?? 'No course' }}</option>@endforeach</select></label>
+            <label class="block text-sm font-medium text-slate-700">School term<select name="school_term_id" x-model="termId" required class="mt-1 block w-full rounded-lg border-slate-300"><option value="">Select term</option>@foreach($terms as $term)<option value="{{ $term->id }}">{{ $term->display_name }}</option>@endforeach</select></label>
+            <fieldset class="rounded-xl border border-slate-200 p-4"><div class="flex flex-wrap items-center justify-between gap-3"><legend class="px-1 text-sm font-semibold">Available subjects</legend><button type="button" @click="selectVisible()" :disabled="filteredAvailable.length===0" class="rounded-lg border border-indigo-200 px-3 py-1.5 text-xs font-semibold text-indigo-700 transition hover:bg-indigo-50 disabled:cursor-not-allowed disabled:opacity-50">Select visible</button></div><label class="mt-2 block text-xs font-medium text-slate-600">Filter subjects<input type="search" x-model="subjectQuery" placeholder="Search code or subject name" class="mt-1 block w-full rounded-lg border-slate-300 text-sm"></label><template x-for="subject in filteredAvailable" :key="subject.id"><label class="mt-2 flex cursor-pointer items-center justify-between gap-4 rounded-lg border border-slate-100 px-3 py-3 text-sm transition hover:border-indigo-200 hover:bg-indigo-50/50"><span class="flex items-center gap-3"><input type="checkbox" name="subject_ids[]" :value="subject.id" x-model.number="selected" class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"><span><span class="block font-medium text-slate-800" x-text="subject.name"></span><span class="mt-0.5 block text-xs text-slate-500" x-text="subject.units + ' units'"></span></span></span><span class="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-600">No extra fee</span></label></template><p x-show="!studentId||!termId" class="py-3 text-sm text-slate-500">Choose a student and school term to view applicable subjects.</p><p x-show="studentId&&termId&&available.length===0" class="py-3 text-sm text-slate-500">No subjects match this student's course, year level, and term.</p><p x-show="studentId&&termId&&available.length>0&&filteredAvailable.length===0" class="py-3 text-sm text-slate-500">No subjects match your search.</p></fieldset>
+            <div class="flex items-center justify-between rounded-xl bg-indigo-50 px-4 py-3 text-sm"><span class="font-medium text-indigo-900">Selected units</span><span class="font-bold text-indigo-900" x-text="selectedUnits.toFixed(1)"></span></div>
+            <div class="flex justify-end gap-3"><a href="{{ route('admin.enrollments.index') }}" class="rounded-lg border px-4 py-2.5 text-sm font-semibold">Cancel</a><button class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white">Save enrollment</button></div>
+        </form>
+    </div></main>
+</x-app-layout>

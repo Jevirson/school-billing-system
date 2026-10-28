@@ -1,0 +1,68 @@
+﻿SCHOOL BILLING SYSTEM
+SOFTWARE REQUIREMENTS SPECIFICATION
+
+Prepared by:
+Jevirson Andrew H. Intes
+
+Abstract
+This project proposes the development of a School Billing System designed to streamline and automate fee management, payment collection, and financial monitoring for educational institutions. The system will provide a centralized platform for handling student accounts, invoices, payment history, and outstanding balances while improving reliability, accuracy, and administrative efficiency.
+
+1. INTRODUCTION
+The School Billing System is an automated solution for managing student fees and school financial transactions. It is intended for administrators, staff, and students to monitor tuition, generate invoices, record payments, and maintain accurate financial records in an organized and secure way.
+The system reduces dependence on manual recordkeeping and improves transparency for all parties involved. It is designed to manage school fees, terms, payment schedules, and balance updates in a consistent and reliable manner.
+
+2. BACKGROUND OF THE STUDY
+Manual billing systems are often prone to delays, duplication of records, calculation errors, and difficulty in tracking student balances. Many schools still rely on spreadsheets and paper records, making it harder to generate reports and maintain accurate financial data.
+The School Billing System addresses these concerns by providing an efficient digital process for student billing, fee management, payment tracking, and financial reporting. This modern approach supports better service delivery and smoother school operations.
+
+3. PROBLEM STATEMENT
+The school currently experiences difficulties in managing billing records manually. These issues include inaccurate student balances, missed payment updates, delayed invoice generation, duplicate records, limited reporting, and poor financial visibility.
+Without a centralized billing system, school administrators spend too much time on repetitive financial tasks and are at a higher risk of errors. There is a need for a system that will automate the process while maintaining data security and financial integrity.
+
+4. OBJECTIVES OF THE STUDY
+To automate school fee collection and payment recording.
+To generate accurate billing statements and invoices for each student.
+To monitor outstanding balances and payment statuses.
+To reduce manual workload and human error in school financial operations.
+To provide role-based access for administrators and students.
+To improve financial transparency and reporting for decision-making.
+
+5. SCOPE OF THE STUDY
+The system includes student information management, school fee definitions, invoice generation, payment recording, account statements, and financial reporting. It focuses on the billing and payment process of the school and is intended to support administrative and student financial needs.
+The system is limited to fees, student accounts, and payment operations. It does not cover academic grading or general school administration beyond billing-related functions.
+
+6. FUNCTIONAL REQUIREMENTS
+The system shall allow administrators to manage student records and billing information.
+The system shall allow administrators to add fees, school terms, and billing policies.
+The system shall generate student bills and itemized invoices with details of charges and payment status.
+The system shall record student payments and automatically update balances.
+The system shall prevent duplicate billing entries and invalid overpayments.
+The system shall provide statement of account reports and payment history for students.
+The system shall support secure login and role-based access control.
+The system shall allow authorized users to generate financial reports and summaries.
+
+7. NON-FUNCTIONAL REQUIREMENTS
+The system must be reliable, accurate, and easy to use.
+The system must protect financial data through secure authentication and access control.
+The system must be responsive and compatible with standard web browsers.
+The system must be scalable to support future school growth and additional features.
+The system must maintain data integrity and minimize errors in transaction processing.
+
+8. USERS OF THE SYSTEM
+Administrator: manages student accounts, billing setup, invoices, and reports.
+Student: views billing statements, payment records, and outstanding balances.
+School staff or authorized personnel: access billing data based on assigned privileges.
+
+9. BENEFITS OF THE SYSTEM
+Improved efficiency in school fee management.
+Reduced manual workload and paperwork.
+Accurate and transparent student billing records.
+Better payment tracking and monitoring of balances.
+Faster generation of invoices and reports.
+Enhanced confidence in financial decision-making.
+
+10. CONCLUSION
+The School Billing System is a necessary solution for any educational institution that wants to improve its financial management efficiency. By automating the process of fee collection, invoice generation, and payment tracking, the system provides a more accurate, transparent, and secure billing environment. This will support better financial operations and improve the overall school experience for administrators and students.
+
+Prepared by:
+Jevirson Andrew H. Intes

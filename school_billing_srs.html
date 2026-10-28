@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Billing System SRS</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 9mm 8mm 7mm 8mm;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ececec;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+    }
+
+    body {
+      padding: 10px 0;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 18px auto;
+      background: #ffffff;
+      padding: 12mm 14mm 10mm 14mm;
+      box-sizing: border-box;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+      position: relative;
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+      margin-bottom: 0;
+    }
+
+    .top-title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 0 0 8px 0;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 10px;
+      color: #374151;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .prepared-wrap {
+      text-align: center;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      font-size: 9.5px;
+      color: #4b5563;
+    }
+
+    .author {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 8px 0;
+      color: #111827;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+
+    h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-top: 14px;
+    }
+
+    h3 {
+      font-size: 11.5px;
+      margin-top: 8px;
+    }
+
+    p {
+      font-size: 11px;
+      line-height: 1.55;
+      margin: 0 0 8px 0;
+      text-align: justify;
+      color: #1f2937;
+    }
+
+    ul {
+      margin: 0 0 10px 18px;
+      padding: 0;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    li {
+      margin-bottom: 2px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 14px 0;
+      font-size: 10.5px;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 5px 6px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #e2e8f0;
+      font-weight: 700;
+    }
+
+    .mini-footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 6px;
+      text-align: center;
+      font-size: 8.5px;
+      color: #64748b;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .section-box {
+      border: 1px solid #d1d5db;
+      background: #f8fafc;
+      padding: 8px 10px;
+      margin-top: 10px;
+    }
+
+    .section-box p {
+      margin-bottom: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .centered {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="top-title">SCHOOL BILLING SYSTEM</div>
+    <div class="subtitle">Software Requirements Specification</div>
+    <div class="prepared-wrap">Prepared by:</div>
+    <div class="author">Jevirson Andrew H. Intes</div>
+
+    <h1>1.0 Introduction</h1>
+    <h2>1.1 Purpose</h2>
+    <p>This Software Requirements Specification (SRS) describes the proposed School Billing System and defines the functional, operational, and technical requirements needed to manage student fees, payment transactions, and account records efficiently. The system is intended to support school administrators, staff, and students in handling billing tasks accurately and securely.</p>
+    <p>The document identifies what the system is expected to do, how it will operate, and the constraints under which it must function. It is designed to provide a clear understanding of the system’s purpose, scope, and requirements.</p>
+
+    <h2>1.2 Scope of Project</h2>
+    <p>The School Billing System is a web-based application intended to support the management of student accounts, school fees, invoices, payments, balances, and financial reporting. It is designed to replace repetitive manual processes and improve the accuracy of data handling and financial monitoring.</p>
+    <p>The system will allow administrators to manage student billing records, create invoices, record payments, compute outstanding balances, and generate financial reports. It will also allow students to view their own statements and payment histories.</p>
+
+    <h2>1.3 Glossary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Term</th>
+          <th>Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Administrator</td><td>Authorized school personnel responsible for managing student accounts, fees, billing setup, and financial records.</td></tr>
+        <tr><td>Student</td><td>An individual enrolled in the school whose tuition and fees are monitored by the system.</td></tr>
+        <tr><td>Invoice</td><td>A formal billing statement showing the student’s charges, payment status, and balance.</td></tr>
+        <tr><td>Payment</td><td>The amount paid by the student toward school fees or outstanding balances.</td></tr>
+        <tr><td>Statement of Account</td><td>A summary of all charges, payments, and current financial status for a student.</td></tr>
+        <tr><td>Billing Period</td><td>The school term or academic period during which fees are generated and due.</td></tr>
+        <tr><td>Due Balance</td><td>The remaining amount that a student still owes after applied payments are deducted.</td></tr>
+      </tbody>
+    </table>
+    <div class="mini-footer">SRS Version 1.0 • School Billing System</div>
+  </div>
+
+  <div class="page">
+    <h1>2.0 Background of the Study</h1>
+    <p>School fee management is an important part of educational administration. However, many schools still rely on manual billing processes that involve spreadsheets, handwritten records, and repeated calculations. These methods often lead to inefficiency, inconsistency, and difficulty in tracking student dues.</p>
+    <p>As the number of students increases, the complexity of managing payment collections, balances, and account records also increases. Manual recordkeeping often results in data duplication, missing entries, delays in billing, and inaccurate financial reporting.</p>
+    <p>The School Billing System addresses these challenges by providing a centralized and automated platform for managing student fees, invoices, and payment transactions. This improves transparency, reduces workload, and supports better school financial decision-making.</p>
+
+    <h1>3.0 Problem Statement</h1>
+    <p>The school currently experiences challenges in managing billing records manually. These include difficulty in tracking student balances, delayed invoice generation, duplicated or lost records, and poor visibility of unpaid dues.</p>
+    <p>Without a centralized billing system, administrators must spend significant time checking records and updating balances. This increases the risk of human error and slows down the processing of financial transactions.</p>
+    <p>There is therefore a need for a reliable School Billing System that can maintain accurate fee records, compute balances correctly, and make billing operations more efficient and transparent.</p>
+
+    <h1>4.0 Objectives of the Study</h1>
+    <ul>
+      <li>To automate the processing and recording of school fees.</li>
+      <li>To generate accurate student invoices and billing statements.</li>
+      <li>To monitor outstanding balances and payment status.</li>
+      <li>To reduce manual workload and minimize human error.</li>
+      <li>To provide secure and role-based access for administrators and students.</li>
+      <li>To improve transparency and reliability of financial reporting.</li>
+    </ul>
+    <div class="mini-footer">School Billing System SRS</div>
+  </div>
+
+  <div class="page">
+    <h1>5.0 Scope of the Study</h1>
+    <p>The system includes student information management, fee definitions, invoice generation, payment recording, statement of account, and financial reporting. It focuses on the billing and payment process of the school and is intended to support both administrative tasks and student financial access.</p>
+    <p>The system will cover student records, fee setup, billing periods, payment history, due balances, and financial summaries. The scope is limited to billing-related functions and does not include full academic management beyond the financial features associated with student accounts.</p>
+
+    <h1>6.0 Functional Requirements</h1>
+    <ul>
+      <li>The system shall allow administrators to manage student records and billing information.</li>
+      <li>The system shall allow administrators to add school fees, tuition categories, and billing periods.</li>
+      <li>The system shall generate student bills and itemized invoices with detailed charges and balances.</li>
+      <li>The system shall record student payments and automatically update outstanding balances.</li>
+      <li>The system shall prevent duplicate billing entries and invalid overpayments.</li>
+      <li>The system shall provide statement-of-account summaries and payment history when authorized.</li>
+      <li>The system shall support secure login and role-based access control.</li>
+      <li>The system shall allow administrators to generate reports and summaries for decision-making.</li>
+    </ul>
+
+    <h1>7.0 Non-Functional Requirements</h1>
+    <ul>
+      <li>The system must be reliable, accurate, and easy to use.</li>
+      <li>The system must protect financial data through secure authentication and access control.</li>
+      <li>The system must be responsive and compatible with commonly used web browsers.</li>
+      <li>The system must be scalable to support future school growth and additional features.</li>
+      <li>The system must maintain data integrity and reduce errors during transaction processing.</li>
+    </ul>
+    <div class="mini-footer">Prepared by: Jevirson Andrew H. Intes</div>
+  </div>
+
+  <div class="page">
+    <h1>8.0 Users of the System</h1>
+    <div class="grid-2">
+      <div class="section-box">
+        <p><strong>Administrator</strong></p>
+        <p>Responsible for managing student accounts, setting fees, generating invoices, recording payments, and producing reports.</p>
+      </div>
+      <div class="section-box">
+        <p><strong>Student</strong></p>
+        <p>Views personal billing information, payment history, outstanding balances, and statements of account.</p>
+      </div>
+      <div class="section-box">
+        <p><strong>School Staff</strong></p>
+        <p>Authorized personnel may access relevant billing information according to assigned permissions.</p>
+      </div>
+      <div class="section-box">
+        <p><strong>System Security</strong></p>
+        <p>Role-based access ensures that users can only view and modify data relevant to their responsibilities.</p>
+      </div>
+    </div>
+
+    <h1>9.0 Benefits of the System</h1>
+    <ul>
+      <li>Improved efficiency in school fee management.</li>
+      <li>Reduced manual workload and paperwork.</li>
+      <li>Accurate and transparent student billing records.</li>
+      <li>Better tracking of outstanding balances and payments.</li>
+      <li>Faster invoice generation and reporting.</li>
+      <li>Greater confidence in financial decision-making and overall school operations.</li>
+    </ul>
+
+    <h1>10.0 Conclusion</h1>
+    <p>The School Billing System is a necessary and beneficial solution for schools seeking a more organized, efficient, and transparent financial management process. By automating fee collections, invoice generation, and payment tracking, the system improves data accuracy and reduces administrative burden.</p>
+    <p>With secure access, structured records, and dependable reporting features, the proposed system will support a more efficient school billing environment for both administrators and students.</p>
+
+    <div class="prepared-wrap" style="margin-top: 18px;">Prepared by:</div>
+    <div class="author">Jevirson Andrew H. Intes</div>
+    <div class="mini-footer">End of Document</div>
+  </div>
+</body>
+</html>
