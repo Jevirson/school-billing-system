@@ -15,7 +15,7 @@
 </head>
 <body>
     <article class="receipt">
-        <p>{{ config('app.name', 'School Billing System') }}</p>
+        <p>{{ config('app.name', 'Billing System') }}</p>
         <h1>OFFICIAL PAYMENT RECEIPT</h1>
         <p>Receipt {{ $payment->reference ?: '#'.$payment->id }}</p>
         <div class="row"><span class="label">Student</span><strong>{{ $payment->bill->studentProfile->invoice_name }}</strong></div>

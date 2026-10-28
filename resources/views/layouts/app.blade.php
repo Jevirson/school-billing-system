@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ trim($__env->yieldContent('title', 'School Billing')) }} · Clearance</title>
+        <title>{{ trim($__env->yieldContent('title', 'Billing System')) }} · {{ config('app.name', 'Billing System') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -22,10 +22,10 @@
             <header class="border-b border-slate-200 bg-white">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div class="flex min-h-20 flex-wrap items-center justify-between gap-x-8 gap-y-3 py-4">
-                        <a href="{{ route('dashboard') }}" class="flex shrink-0 items-center gap-3" aria-label="Clearance home">
+                        <a href="{{ route('dashboard') }}" class="flex shrink-0 items-center gap-3" aria-label="Billing System home">
                             <img src="{{ asset('images/school-logo.jfif') }}" alt="" class="h-11 w-11 rounded-xl border border-slate-200 bg-white object-contain p-0.5 shadow-sm">
                             <span>
-                                <span class="block text-lg font-bold leading-tight tracking-tight text-slate-900">Clearance</span>
+                                <span class="block text-lg font-bold leading-tight tracking-tight text-slate-900">Billing System</span>
                                 <span class="mt-0.5 block text-[10px] font-semibold tracking-[0.16em] text-slate-500">SCHOOL BILLING</span>
                             </span>
                         </a>
@@ -166,7 +166,7 @@
 
             <footer class="border-t border-slate-200 bg-white">
                 <div class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-                    <span class="font-semibold text-slate-600">Clearance · School Billing System</span>
+                    <span class="font-semibold text-slate-600">{{ config('app.name', 'Billing System') }}</span>
                     <span>Secure student accounts and billing management</span>
                 </div>
             </footer>

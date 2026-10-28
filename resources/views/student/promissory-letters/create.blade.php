@@ -38,7 +38,7 @@
                     <div class="mb-4 flex flex-wrap items-start justify-between gap-3"><div><p class="text-xs font-bold uppercase tracking-[0.14em] text-indigo-700">LIVE PREVIEW</p><h2 class="mt-1 text-lg font-bold text-slate-900">Promissory letter</h2></div><span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-indigo-700">Review before submitting</span></div>
                     <article class="rounded-xl border border-slate-200 bg-white p-5 text-sm leading-6 text-slate-700 shadow-sm">
                         <div class="border-b-2 border-slate-800 pb-4 text-center">
-                            <p class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">{{ config('app.name', 'School Billing System') }}</p>
+                            <p class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">{{ config('app.name', 'Billing System') }}</p>
                             <p class="mt-2 text-lg font-bold tracking-wide text-slate-900">PROMISSORY LETTER</p>
                             <p class="text-xs uppercase tracking-widest text-slate-500">Request for Extension of Payment</p>
                         </div>

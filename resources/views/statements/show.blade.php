@@ -26,7 +26,7 @@
         <article class="statement-card mx-auto max-w-4xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
             <div class="flex flex-wrap justify-between gap-5 border-b border-slate-200 pb-6">
                 <div>
-                    <p class="text-sm font-semibold uppercase tracking-[0.15em] text-indigo-600">School Billing System</p>
+                    <p class="text-sm font-semibold uppercase tracking-[0.15em] text-indigo-600">{{ config('app.name', 'Billing System') }}</p>
                     <h1 class="mt-2 text-3xl font-bold text-slate-900">Statement of Account</h1>
                     <p class="mt-2 text-sm text-slate-500">Account balance and payment activity for this invoice.</p>
                 </div>

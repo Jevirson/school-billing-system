@@ -7,7 +7,7 @@
 </style>
 <article class="print-letter rounded-2xl border border-slate-200 bg-white p-7 shadow-sm sm:p-10">
     <div class="border-b-2 border-slate-800 pb-5 text-center">
-        <p class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">{{ config('app.name', 'School Billing System') }}</p>
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">{{ config('app.name', 'Billing System') }}</p>
         <h1 class="mt-3 text-2xl font-bold tracking-wide text-slate-900">PROMISSORY LETTER</h1>
         <p class="mt-1 text-xs uppercase tracking-widest text-slate-500">Request for Extension of Payment</p>
     </div>

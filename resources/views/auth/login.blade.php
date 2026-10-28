@@ -1,6 +1,6 @@
 <x-guest-layout>
     <main class="login-page">
-        <section class="login-story" aria-label="School billing system">
+        <section class="login-story" aria-label="Billing account overview">
             <div class="login-story-glow login-story-glow-one"></div>
             <div class="login-story-glow login-story-glow-two"></div>
 
@@ -13,28 +13,36 @@
                     </svg>
                 </span>
                 <span class="login-brand-copy">
-                    <span class="login-brand-name">Clearance</span>
-                    <span class="login-brand-subtitle">SCHOOL BILLING SYSTEM</span>
+                    <span class="login-brand-name">Billing System</span>
+                    <span class="login-brand-subtitle">STUDENT ACCOUNTS</span>
                 </span>
             </a>
 
             <div class="login-story-content">
-                <span class="login-eyebrow"><span></span> YOUR SCHOOL, IN GOOD HANDS</span>
-                <h1>Every detail.<br>In <span>one place.</span></h1>
-                <p>A simpler way to stay on top of tuition, payments, and student accounts — so your school day can focus on what matters.</p>
+                <span class="login-eyebrow"><span></span> STUDENT ACCOUNTS · PAYMENT TRACKING</span>
+                <h1>Tuition, tracked.<br><span>Clarity, delivered.</span></h1>
+                <p>Your school account, organized in one place. Keep an eye on charges, payment progress, and what comes next.</p>
 
-                <div class="login-feature-list">
-                    <div class="login-feature">
-                        <span class="login-feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none"><path d="M7 3.75h7.5L19 8.25v11A1.75 1.75 0 0 1 17.25 21h-10A1.75 1.75 0 0 1 5.5 19.25v-13A2.5 2.5 0 0 1 8 3.75ZM14 4v5h5M8.5 13h7m-7 3.5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </span>
-                        <span><strong>Clear, organized billing</strong><small>Know what is due and when.</small></span>
+                <div class="login-ledger-card" aria-label="Illustrative sample billing statement">
+                    <div class="login-ledger-heading">
+                        <span><span class="login-ledger-indicator"></span> BILLING OVERVIEW</span>
+                        <span class="login-ledger-sample">SAMPLE BILL</span>
                     </div>
-                    <div class="login-feature">
-                        <span class="login-feature-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 19 6v5.25c0 4.25-2.9 7.75-7 9.75-4.1-2-7-5.5-7-9.75V6l7-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </span>
-                        <span><strong>Your information, protected</strong><small>Secure access for every account.</small></span>
+                    <div class="login-ledger-balance">
+                        <span>CURRENT BALANCE</span>
+                        <strong><span>₱</span> 8,450.00</strong>
+                    </div>
+                    <div class="login-ledger-rows">
+                        <div><span>Tuition balance</span><strong>₱7,500.00</strong></div>
+                        <div><span>School fees</span><strong>₱950.00</strong></div>
+                    </div>
+                    <div class="login-ledger-progress">
+                        <div><span>Payment progress</span><strong>64%</strong></div>
+                        <span class="login-ledger-progress-track"><span></span></span>
+                    </div>
+                    <div class="login-ledger-footer">
+                        <span>ACCOUNT SNAPSHOT</span>
+                        <span>Charges · Payments · Balance</span>
                     </div>
                 </div>
             </div>
@@ -53,15 +61,15 @@
                         </svg>
                     </span>
                     <span class="login-brand-copy">
-                        <span class="login-brand-name">Clearance</span>
-                        <span class="login-brand-subtitle">SCHOOL BILLING SYSTEM</span>
+                        <span class="login-brand-name">Billing System</span>
+                        <span class="login-brand-subtitle">STUDENT ACCOUNTS</span>
                     </span>
                 </a>
 
                 <div class="login-form-heading">
-                    <span class="login-form-kicker">WELCOME BACK</span>
-                    <h2>Sign in to your account</h2>
-                    <p>Enter your details below to continue.</p>
+                    <span class="login-form-kicker">YOUR ACCOUNT, AT A GLANCE</span>
+                    <h2>Welcome back.</h2>
+                    <p>Sign in to review your school billing account.</p>
                 </div>
 
                 @if ($errors->any())
@@ -127,7 +135,7 @@
             </div>
 
             <footer class="login-panel-footer">
-                <span>&copy; {{ date('Y') }} Clearance School Billing System</span>
+                <span>&copy; {{ date('Y') }} {{ config('app.name', 'Billing System') }}</span>
                 <span class="login-secure-note">
                     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3.25" y="7" width="9.5" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
                     SECURE SIGN IN
